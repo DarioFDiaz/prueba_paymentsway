@@ -4,14 +4,21 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "vitest": "^4.0.6"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "elysia": "^1.1.0",
+    "@sinclair/typebox": "^0.34.41",
+    "elysia": "^1.4.13",
     "ofetch": "^1.5.1",
     "zod": "^4.1.12"
+  },
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "test": "vitest run",
+    "test:ui": "vitest --ui"
   }
 }
